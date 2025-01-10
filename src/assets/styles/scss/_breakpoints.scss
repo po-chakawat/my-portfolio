@@ -1,0 +1,87 @@
+@mixin breakpoint-up($size: default) {
+    @if $size ==xs {
+        @media (min-width: 0) {
+            @content;
+        }
+    }
+
+    @else if $size ==sm {
+        @media (min-width: 576px) {
+            @content;
+        }
+    }
+
+    @else if $size ==md {
+        @media (min-width: 768px) {
+            @content;
+        }
+    }
+
+    @else if $size ==lg {
+        @media (min-width: 992px) {
+            @content;
+        }
+    }
+
+    @else if $size ==xl {
+        @media (min-width: 1200px) {
+            @content;
+        }
+    }
+
+    @else if $size ==xxl {
+        @media (min-width: 1440px) {
+            @content;
+        }
+    }
+
+    @else {
+        @media (min-width: 768px) {
+            @content;
+        }
+    }
+}
+
+@mixin breakpoint-down($size: default) {
+    @if $size ==xs {
+        @media (max-width: 0) {
+            @content;
+        }
+    }
+
+    @else if $size ==sm {
+        @media (max-width: 576px) {
+            @content;
+        }
+    }
+
+    @else if $size ==md {
+        @media (max-width: 768px) {
+            @content;
+        }
+    }
+
+    @else if $size ==lg {
+        @media (max-width: 992px) {
+            @content;
+        }
+    }
+
+    @else if $size ==xl {
+        @media (max-width: 1200px) {
+            @content;
+        }
+    }
+
+    @else if $size ==xxl {
+        @media (max-width: 1440px) {
+            @content;
+        }
+    }
+
+    @else {
+        @media (max-width: 768px) {
+            @content;
+        }
+    }
+}
